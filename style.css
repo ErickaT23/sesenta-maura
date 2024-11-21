@@ -1,0 +1,659 @@
+:root {
+    --color-1: Goldenrod;
+    --font-1: "cormorant garamond", serif;
+    --scroll-animation-duration: 0.5s;
+}
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    background-color: white;
+    font-family: 'cormorant garamond';
+    font-style: italic;
+}
+#envelope {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    perspective: 1000px;
+    z-index: 10;
+}
+#envelope:hover {
+    transform: scale(1.05);
+}
+/* Parte superior del sobre (solapa) */
+#envelope-top {
+    top: 0;
+    border-bottom: none;
+}
+/* Parte inferior del sobre (cuerpo) */
+#envelope-bottom {
+    bottom: 0;
+    border-top: none;
+}
+#envelope-top, #envelope-bottom {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    background-image: url(/imagenes/div0.png);
+    box-shadow: 0 0 10px rgb(223, 215, 215);
+}
+/* Sello del sobre */
+#seal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 140px;
+    height: 140px;
+    background: #d8631a;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.216);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: opacity 1s ease-in-out;
+    z-index: 11;
+}
+#seal h2 {
+    margin: 0;
+    font-size: 25px;
+}
+#invitacion {
+    display: none;
+    background: transparent;
+    max-width: 800px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.sintillo{
+    position: relative;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-top: -100px;
+    margin-bottom: -40px;
+    z-index: 2;
+}
+.sintillo::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/imagenes/div1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;  
+}
+.sintillo h1, .sintillo h2{
+    background: linear-gradient(to right, #b29a68, #d4af37, #ffd700, #d4af37, #b29a68);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: shine 1.5s infinite linear;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    font-family: var(--font-1);
+    font-weight: 400;
+    font-style: italic;
+    margin: 0;
+    white-space: nowrap;
+}
+.sintillo h1{
+    font-size: 38px;
+    margin-top: 80px;
+}
+.sintillo h2 {
+    font-size: 60px;
+    margin-top: 210px;
+}
+.section-main {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    transform: translateY(20px);
+    animation: fadeIn var(--scroll-animation-duration) ease-in forwards;
+}
+.section-main img {
+    width: 100%;
+    height: auto;
+}
+.section , .section-playlist, .section-filter, .section-quote{
+    padding: 0;
+    transform: translateY(20px);
+    animation: fadeIn var(--scroll-animation-duration) ease-in forwards;
+}
+.section-music{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.section-music h2, .section-countdown h1, .section-calendar a, .section span, .section-quote h1, #seal h2{
+    background: linear-gradient(to right, #b29a68, #d4af37, #ffd700, #d4af37, #b29a68);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: shine 1.5s infinite linear;
+    font-family: var(--font-1);
+    font-weight: 400;
+    font-style: italic;
+}
+.section-countdown p, .section-countdown h2, .countdown-circle span, .section h2, .section p, .section-gits h2, .section-gifts p, .section h3, .section-gifts h2, .section-filter p, .section-filter h2{
+    color: var(--color-1);
+    font-family: var(--font-1);
+    font-weight: 400;
+    font-style: italic;
+}
+.section-music h2{
+    font-size: 25px;
+}
+.section-0{
+    position: relative;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 0;
+    margin-bottom: -30px;
+}
+.section-0::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/imagenes/div2.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+.section-countdown {
+    margin: 0;
+    padding: 0;
+    transform: translateY(20px);
+    animation: fadeIn var(--scroll-animation-duration) ease-in forwards;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.section-countdown p, .section-countdown h2, .section p, .section-gifts p, .section-filter p{
+    margin: 0;
+    font-size: 30px;
+    padding: 15px;
+}
+.section-countdown h1 {
+    font-size: 70px;
+    padding: 10px;
+    margin: 0;
+}
+#contador{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 0;
+}
+.countdown-circle {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    background-color:PeachPuff;
+}
+.countdown-circle span {
+    font-size: 1em;
+    padding: 0;
+}
+.section-calendar {
+    padding: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    width: 180px;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: #ffffff91;
+    cursor: pointer;
+}
+.section-calendar a {
+    text-decoration: none;
+    font-size: 1.2em;
+}
+.section-calendar:hover {
+    background-color:#FFA07A;
+}
+.section-calendar a:hover {
+    color: white;
+}
+.section-1{
+    position: relative;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.section-1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/imagenes/div4.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+.icon {
+    margin-top: 20px;
+}
+.section h2, .section-gifts h2, .section h3{
+    padding: 10px;
+    font-size: 40px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+.section-filter h2{
+    padding: 10px;
+    font-size: 28px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+.time-location{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.section span{
+    font-style: normal;
+    font-size: 24px;
+    padding: 5px;
+}
+.section-2{
+    position: relative;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.section-2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/imagenes/div5.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+.section-3{
+    position: relative;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.section-3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/imagenes/div3.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px;
+}
+.galeria img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+.galeria img:hover {
+    transform: scale(1.1);
+}
+.photo-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+.photo-modal img {
+    max-width: 80%;
+    max-height: 80%;
+    margin: auto;
+    display: block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+.close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+button {
+    background-color:#FFA07A;
+    color: #fff;
+    border-radius: 5px;
+    font-family: var(--font-1);
+    padding: 10px;
+    transition: background-color 0.3s;
+    border: none;
+    font-size: 1em;
+    text-transform: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-style: italic;
+    font-size: 1.2em;
+}
+button:hover {
+    background-color: #d4af37;
+}
+.section-4{
+    position: relative;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.section-4::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/imagenes/div4.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+.section-quote h1 {
+    font-size: 30px;
+    padding: 15px;
+    margin: 20px;
+}
+footer {
+    padding: 20px;
+    background-color: #723610;
+    background-size: cover;
+    color: white;
+    font-size: var(--footer-font-size);
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: -10px;
+}
+.section-social-icons {
+    padding: 20px;
+}
+.section-social-icons a {
+    color: white;
+    margin: 0 10px;
+    text-decoration:none;
+}
+.section-social-icons i{
+    font-size: 35px;
+}
+.section-logo img{
+    margin-top: 0px;
+}
+.fade-in-element {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease-in-out;
+}
+.fade-in-element.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Media Queries */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* iPad Styles */
+    .seal{
+        width: 200px;
+        height: 200px;
+        }
+        .sealh h2{
+            font-size: 60px;
+        }
+        .sintillo{
+            height: 500px;
+            margin-bottom: -80px;
+        }
+        .sintillo h1{
+            font-size: 120px;
+            margin-top: 10px;
+        }
+        .sintillo h2{
+            font-size: 150px;
+            margin-top: 280px;
+        }
+        .section-0, .section-1, .section-2, .section-3, .section-4{
+            height: 800px;
+        }
+        .section-countdown p, .section-countdown h2, .section p, .section-gifts p, .section-filter p{
+            margin: 0;
+            font-size: 50px;
+            padding: 15px;
+        }
+        .section-countdown h1{
+            font-size: 140px;
+        }
+        .section-music{
+            margin-top: -90px;
+            height: 500px;
+        }
+        .section-music h2{
+            font-size: 50px;
+        }
+        .countdown-circle{
+            height: 180px;
+            width: 180px;
+        }
+        .countdown-circle span{
+            font-size: 40px;
+        }
+        .section-calendar{
+            padding: 20px;
+            margin-top: 100px;
+            margin-bottom: 100px;
+            width: 50%;
+        }
+        .section-calendar a {
+            font-size: 40px;
+        }
+        .section h2, .section-gifts h2, .section h3, .section-filter h2, .section-quote h1{
+            font-size: 70px;
+        }
+        .section span{
+            font-size: 60px;
+        }
+        button{
+            font-size: 50px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+        .galeria img{
+            height: 300px;
+            width: 300px;
+        }
+        .section-social-icons i{
+            font-size: 55px;
+            margin-top: 50px;
+        }
+        .section-logo img{
+            margin-top: 0px;
+        }
+}
+@media (min-width: 1025px) {
+    /* Laptop Styles */
+    .seal {
+        width: 200px;
+        height: 200px;
+    }
+    .seal h2 {
+        font-size: 60px;
+    }
+    .sintillo {
+        height: 500px;
+        margin-bottom: -80px;
+    }
+    .sintillo h1 {
+        font-size: 120px;
+        margin-top: 10px;
+    }
+    .sintillo h2 {
+        font-size: 150px;
+        margin-top: 280px;
+    }
+    .section-0, .section-1, .section-2, .section-3, .section-4 {
+        height: 600px;
+        width: 100%; /* Asegurarse de que ocupe todo el ancho */
+        display: flex;
+        justify-content: center; /* Centrando horizontalmente */
+        align-items: center; /* Centrando verticalmente */
+    }
+    .section-countdown p, .section-countdown h2, .section p, .section-gifts p, .section-filter p {
+        margin: 0;
+        font-size: 50px;
+        padding: 15px;
+    }
+    .section-countdown h1 {
+        font-size: 140px;
+    }
+    .section-music {
+        margin-top: -90px;
+        height: 500px;
+        width: 100%; /* Asegurarse de que ocupe todo el ancho */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .section-music h2 {
+        font-size: 50px;
+    }
+    .countdown-circle {
+        height: 180px;
+        width: 180px;
+    }
+    .countdown-circle span {
+        font-size: 40px;
+    }
+    .section-calendar {
+        padding: 20px;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        width: 50%;
+    }
+    .section-calendar a {
+        font-size: 40px;
+    }
+    .section h2, .section-gifts h2, .section h3, .section-filter h2, .section-quote h1 {
+        font-size: 80px;
+    }
+    .section span {
+        font-size: 60px;
+    }
+    button {
+        font-size: 50px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    .galeria img {
+        height: 300px;
+        width: 300px;
+    }
+    .section-social-icons i {
+        font-size: 55px;
+        margin-top: 50px;
+    }
+    .section-logo img {
+        margin-top: 0px;
+    }
+}

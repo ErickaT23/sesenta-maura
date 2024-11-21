@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felicidades Maura</title>
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Feliz Cumpleaños Maura">
+    <meta property="og:description" content="Celebremos la vida.">
+    <meta property="og:image" content="https://images.pexels.com/photos/7561027/pexels-photo-7561027.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preload" href="/imagenes/footer.png" as="image">
+     <!-- Preconnect and Load Fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+     <script src="https://cdn.lordicon.com/lordicon.js"></script>   
+</head>
+<body>
+    <!-- Sobre de la Invitación -->
+    <div id="envelope">
+        <div id="envelope-top"></div>
+        <div id="seal">
+            <h2 class="fade-in-element visible" style="transition-delay: 0s;">Mis 60 Maura</h2>
+        </div>
+        <div id="envelope-bottom"></div>
+    </div>
+    <!-- Contenido de la Invitación -->
+    <div id="invitacion">
+         <!--header-->
+         <header class="sintillo">
+        <h1>Sesenta y Sensacional</h1>
+        <h2>Maura</h2>
+         </header>
+        <!--imagen-->
+        <div class="section-main fade-in-element">
+            <img src="/imagenes/v2.jpg" alt="foto-portada" width="100%">
+        </div>
+         <!-- Música de fondo -->
+        <div class="section-music fade-in-element">
+            <h2>"Celebration - Kool & The Gang"</h2>
+          <audio id="musica" controls loop>
+             <source src="/celebration.mp4" type="audio/mpeg">
+             Tu navegador no soporta la reproducción de audio.
+          </audio>
+        </div> 
+         <!--div globos juntos-->
+         <div class="section-0" loading="lazy"></div>  
+        <!-- Contador de Fecha Regresiva -->
+        <div class="section-countdown fade-in-element">
+            <p>Están invitados a celebrar la vida de nuestra amada</p>
+            <h1>Maura</h1>
+            <h2>15 . 02 . 2025</h2>
+            <div id="contador">
+                <div class="countdown-circle">
+                    <span id="dias">00</span>
+                    <span>días</span>
+                </div>
+                <div class="countdown-circle">
+                    <span id="horas">00</span>
+                    <span>horas</span>
+                </div>
+                <div class="countdown-circle">
+                    <span id="minutos">00</span>
+                    <span>minutos</span>
+                </div>
+                <div class="countdown-circle">
+                    <span id="segundos">00</span>
+                    <span>segundos</span>
+                </div>
+            </div>
+             <!-- Agregar al Calendario -->
+              <div class="section-calendar">
+              <a href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=NzMzdHQ1cmNuaDg5ODVocWducXM2Y3JnMTcgY182OTRhZWE0ODlhN2FkZTJiYzRmYjRiNGExYTE2ZmY3ZDY2ZjAzNzFlMTgwY2I1MzZmM2M3YzE2NGUxZWMwOGIxQGc&tmsrc=c_694aea489a7ade2bc4fb4b4a1a16ff7d66f0371e180cb536f3c7c164e1ec08b1%40group.calendar.google.com" target="_blank">Agregar al Calendario</a>
+              </div>
+        </div>    
+        <!--foto-->
+        <div class="section fade-in-element">
+            <img src="/imagenes/h1.jpg" alt="fotos-feliz" width="100%" loading="lazy">
+        </div>
+        <!-- Itinerario -->
+        <div class="section fade-in-element">
+            <!--card fiesta-->
+              <div class="party fade-in-element">
+               <lord-icon class="icon"
+               src="https://cdn.lordicon.com/hihfsmas.json"
+               trigger="loop"
+               delay="2000"
+               stroke="light"
+               colors="primary:#d4af37,secondary:#FFA07A"
+               style="width:200px;height:200px">
+               </lord-icon>
+              <h2>Fiesta</h2>
+              <p>Camino Real Antigua</p>
+              <div class="details">
+               <div class="time-location">
+                   <span class="date"> 15 Febrero</span>
+                   <span class="separator">|</span>
+                   <span class="time">18:30 hrs</span>
+               </div>
+           <p>7a Calle Poniente 33b Antigua Guatemala</p>
+           <button type="button" class="direction-button" onclick="elegirAplicacionOtraDireccion()">Cómo llegar</button>
+              </div>
+              </div>
+           </div>
+        <!--div globos izq-->
+        <div class="section-1" loading="lazy"></div>
+          <!--dresscode-->
+          <div class="section fade-in-element">
+                <lord-icon class="icon"
+                 src="https://cdn.lordicon.com/okgbpdra.json"
+                 trigger="loop"
+                 stroke="light"
+                 colors="primary:#d4af37,secondary:#FFA07A"
+                 style="width:200px;height:200px">
+               </lord-icon>
+              <h2>Dress Code</h2>
+              <p>Vistete sensacional y celebremos juntos la vida de nuestra amada Maura.</p>
+          </div>
+          <!--div globo der-->
+        <div class="section-2" loading="lazy"></div>
+        <!-- Regalos -->
+        <div class="section-gifts fade-in-element">
+            <lord-icon class="icon-gift"
+             src="https://cdn.lordicon.com/kezeezyg.json"
+             trigger="loop"
+             delay="2000"
+             stroke="light"
+             colors="primary:#d4af37,secondary:#FFA07A"
+             style="width:200px;height:200px">
+            </lord-icon>
+            <h2>Lluvia de Sobres</h2>
+            <p>Lo que más queremos es compartir contigo, pero agradecemos mucho el gesto de un obsequio. Tendremos un cofre en la entrada para que puedas dejar tu sobre con efectivo</p>
+            <p>¡Gracias!</p>
+        </div>
+          <!--foto-->
+        <div class="section fade-in-element">
+            <img src="/imagenes/h2.jpg" alt="Foto-pastel" width="100%" loading="lazy">
+        </div>
+        <!-- Confirmación -->
+        <div class="section fade-in-element">
+            <h3>Confirmar Asistencia</h3>
+            <lord-icon
+             src="https://cdn.lordicon.com/fjvfsqea.json"
+             trigger="loop"
+             delay="2000"
+             stroke="light"
+             colors="primary:#d4af37,secondary:#FFA07A"
+             style="width:200px;height:200px">
+           </lord-icon>
+           <p>Para nosotros es muy importante que confirmes tu asistencia antes del 01 de Febrero, o bien indicarnos si no podrás acompañarnos.</p>
+            <button onclick="confirmarAsistencia()">Confirmar</button>
+            <div id="confirmacion"></div>
+        </div>
+        <!--div globo-->
+        <div class="section-3" loading="lazy"></div>   
+       <!-- Galería de Fotos -->
+       <div class="section fade-in-element">
+           <h2>Galería</h2>
+           <div class="galeria">
+             <img src="/imagenes/h3.jpg" alt="Foto 1" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
+             <img src="/imagenes/h4.jpg" alt="Foto 2" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
+             <img src="/imagenes/h7.jpg" alt="Foto 3" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
+             <img src="/imagenes/v3.jpg" alt="Foto 4" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
+             <img src="/imagenes/h5.jpg" alt="Foto 4" class="galeria-imagen" onclick="changePhoto(this)" loading="lazy">
+           </div>
+        </div>
+        <!-- Modal para visualización de fotos -->
+        <div id="photo-modal" class="photo-modal" onclick="closeModal(event)">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="main-photo-modal" src="" alt="Imagen ampliada">
+        </div>
+         <!--Hashtag-->
+         <div class="section-filter fade-in-element">
+            <lord-icon
+             src="https://cdn.lordicon.com/wsaaegar.json"
+             trigger="loop"
+             delay="2000"
+             stroke="light"
+             colors="primary:#d4af37,secondary:#FFA07A"
+             style="width:200px;height:200px">
+            </lord-icon>
+            <h2>#sesentaysensacionalmaura</h2>
+            <p>Sube las foto a Instagram utilizando mi hashtag, y poder convertir estas memorias en eternas.</p>
+        </div>
+        <!--div globo-->
+        <div class="section-4" loading="lazy"></div>   
+         <!-- frase final-->
+         <div class="section-quote fade-in-element">
+            <h1>¡Gracias por ser parte de mi faboulosa vida!</h1>
+        </div>
+        <!-- Imagen -->
+        <div class="section fade-in-element">
+            <img src="/imagenes/v1.jpg" alt="Foto-cheers" width="100%" loading="lazy">
+        </div>
+        <!-- Footer -->
+        <footer>
+            <div class="section-social-icons fade-in-element">
+                <a href="https://www.facebook.com/thetwodesign" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/thetwodesign/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/50236011737" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <div class="section-logo">
+                <img src="/Imagenes/2.png" alt="Logo" width="100" loading="lazy">
+            </div>
+        </footer>
+    </div>
+    <script src="/script.js"></script>
+</body>
+</html>
+
